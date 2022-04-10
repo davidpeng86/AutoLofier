@@ -10,10 +10,11 @@ in the script
 
 the file hierchy should be:
 
+'''
 autolofi.py
 artistfolder
   albumfolder
     songs
-    
+'''
     
 the script will create a result folder and all results should be in there
