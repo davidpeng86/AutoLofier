@@ -19,7 +19,7 @@ import re
 import sys
 import codecs
 
-SOURCE = 'Jay'
+SOURCE = 'MichaelJackson'
 OUTPUT = 'result'
 
 AudacityPort = 31117
@@ -86,17 +86,16 @@ if not os.path.exists(OUTPUT):
     os.makedirs(OUTPUT)
 
 for files in os.walk(SOURCE):
-#    print(files[0])
     if files[0] != os.path.join(SOURCE,OUTPUT):
         output = os.path.join(OUTPUT,files[0])
         if not os.path.exists(output):
             os.makedirs(output)
-
+    
     for folders in os.walk(files[0]):
+        
         for foldername in folders[1]:
             filepath = os.path.join(SOURCE,foldername)
-            outputdir = os.path.join('Jay',foldername)
-            outputpath = os.path.join(OUTPUT,outputdir)
+            outputpath = os.path.join(OUTPUT,filepath)
             if not os.path.exists(outputpath):
                 os.makedirs(outputpath)
             for songs in os.walk(filepath):
