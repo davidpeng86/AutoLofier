@@ -16,5 +16,12 @@ The file hierchy should be:
 >>>>    songs
 
 Run the script.
-    
+
+To edit, change parameters in "do_command" according to [Script Reference](https://manual.audacityteam.org/man/scripting_reference.html)
+
+'''
+do_command('ChangePitch:percentage=%d' % -5)
+'''
+
+
 All results should be in a newly created result folder.
